@@ -81,4 +81,23 @@ footer {
 .appLogo {
     max-width: 400px;
 }
+
 /* ----- END MAIN ----- */
+
+/* ----- TABLE CSS ----- */
+.binary-bandit {
+    color: blue !important;
+    font-weight: bolder;
+}
+
+.binary {
+    color: yellowgreen !important;
+    font-weight: bold;
+}
+
+.bandit {
+    color: orange !important;
+    font-weight: bold;
+}
+
+/* ----- END TABLE CSS ----- */
