@@ -1,23 +1,36 @@
+/* Imported Google Fonts */
+/*
+font-family: 'Allan', cursive;
+font-family: 'Bebas Neue', cursive;
+font-family: 'Fira Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Noto Serif JP', serif;
+*/
+/* Base Color Pallete*/
+/* https://coolors.co/364156-cdcdcd-02358d-09a201-dfc201-b70101-01a8b7 */
+
 :root {
 
     /* Fonts */
-    --bl-title-font: 'Poppins', 'sans-serif';
+    --bl-title-font: 'Roboto', sans-serif;
     --bl-subtitle-font: 'Poppins', sans-serif;
     --bl-heading-font: 'Bebas Neue', 'sans-serif';
     --bl-body-font: 'Roboto', sans-serif;
 
     /* Colors */
-    --bl-primary-color: #3da9fc;
-    --bl-secondary-color: #90b4ce;
-    --bl-highlight-color: #3da9fc;
-    --bl-dark-color: #094067;
-    --bl-light-color: #fffffe;
-    --bl-background-color: #d8eefe;
+    --bl-primary-color: #02358D;
+    --bl-secondary-color: #364156;
+    --bl-highlight-color: #2272FC;
+    --bl-dark-color: #1F2632;
+    --bl-light-color: #CDCDCD;
+    --bl-background-color: #F5F5F5;
 
     /* Navbar */
     --bl-nav-bg-color: var(--bl-dark-color);
     --bl-nav-toggler: var(--bl-highlight-color);
-    --bl-nav-toggler-glow: #ef4565;
+    --bl-nav-toggler-glow: hsla(218, 97%, 56%, 0.5);
+    --bl-nav-text-muted: hsl(218, 23%, 75%);
 
     /* Form */
     --bl-form-focous-color: var(var(--bl-secondary-color));
@@ -31,17 +44,8 @@
     --bl-line-height: 1.5rem;
 }
 
-/* ----- IMPORTED GOOGLE FONTS ----- */
-/*
-font-family: 'Allan', cursive;
-font-family: 'Bebas Neue', cursive;
-font-family: 'Fira Sans', sans-serif;
-font-family: 'Poppins', sans-serif;
-font-family: 'Roboto', sans-serif;
-*/
 
-
-/* ----- STICKY FOOTER -----  */
+/* ---- STICKY FOOTER ---- */
 html,
 body {
     height: 100%;
@@ -54,14 +58,44 @@ body {
 
 main {
     flex-grow: 1;
+    padding-top: 70px;
 }
 
 footer {
     flex-shrink: 0;
 }
 
-/* ----- END STICKY FOOTER -----  */
+/* ---- END STICKY FOOTER ---- */
 
+
+/* --- NAVBAR ---- */
+#mainNav {
+    background-color: var(--bl-nav-bg-color) !important;
+    font-family: var(--bl-subtitle-font);
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+#mainNav .active {
+    border-bottom: 4px solid var(--bl-primary-color);
+
+}
+
+.navbar-toggler-bl {
+    color: var(--bl-nav-toggler);
+    font-size: 2rem;
+}
+
+.navbar-toggler {
+    color: var(--bl-nav-toggler-glow);
+    border-color: var(--bl-highlight-color);
+}
+
+.navbar-brand {
+    font-family: var(--bl-title-font);
+}
+
+/* --- END NAVBAR  ---- */
 
 /* ----- MAIN ----- */
 .checklist {
@@ -83,6 +117,70 @@ footer {
 }
 
 /* ----- END MAIN ----- */
+
+/* ---- FOOTER ---- */
+
+.social-icon {
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--bl-light-color);
+    transition: color 0.25s;
+}
+
+.social-icon :hover {
+    color: var(--bl-highlight-color);
+}
+
+.footer-main .text-muted {
+    color: var(--bl-nav-text-muted) !important;
+}
+
+.footer-cta {
+    background-color: var(--bl-secondary-color);
+    border-radius: 10px;
+    width: 75%;
+}
+
+.footer-message {
+    font-family: var(--bl-subtitle-font);
+    color: var(--bl-light-color);
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 400;
+    letter-spacing: .09rem;
+}
+
+.footer-bg-cta {
+    background: linear-gradient(to bottom,
+            var(--bl-background-color) 0%,
+            var(--bl-background-color) 50%,
+            var(--bl-dark-color) 50%,
+            var(--bl-dark-color) 100%);
+}
+
+.footer-main {
+    background-color: var(--bl-dark-color);
+}
+
+/* ---- END FOOTER ---- */
+
+/* ---- BOOTSTRAP OVEREIDE ---- */
+.btn-primary {
+    --bs-btn-bg: var(--bl-primary-color);
+    --bs-btn-border-color: var(--bl-primary-color);
+    --bs-btn-hover-bg: var(--bl-highlight-color);
+    --bs-btn-hover-border-color: var(--bl-highlight-color);
+    --bs-btn-active-color: var(--bl-light-color);
+}
+
+.btn-outline-light {
+    --bs-btn-border-color: var(--bl-light-color);
+    --bs-btn-hover-bg: var(--bl-light-color);
+    --bs-btn-hover-border-color: var(--bl-light-color);
+    --bs-btn-active-color: var(--bl-dark-color);
+}
+
+/* ---- END BOOTSTRAP OVEREIDE ---- */
 
 /* ----- TABLE CSS ----- */
 .binary-bandit {
