@@ -1,0 +1,84 @@
+:root {
+
+    /* Fonts */
+    --bl-title-font: 'Poppins', 'sans-serif';
+    --bl-subtitle-font: 'Poppins', sans-serif;
+    --bl-heading-font: 'Bebas Neue', 'sans-serif';
+    --bl-body-font: 'Roboto', sans-serif;
+
+    /* Colors */
+    --bl-primary-color: #3da9fc;
+    --bl-secondary-color: #90b4ce;
+    --bl-highlight-color: #3da9fc;
+    --bl-dark-color: #094067;
+    --bl-light-color: #fffffe;
+    --bl-background-color: #d8eefe;
+
+    /* Navbar */
+    --bl-nav-bg-color: var(--bl-dark-color);
+    --bl-nav-toggler: var(--bl-highlight-color);
+    --bl-nav-toggler-glow: #ef4565;
+
+    /* Form */
+    --bl-form-focous-color: var(var(--bl-secondary-color));
+    --bl-formfocous-shadow: var(var(--bl-primary-color));
+    --bl-formfocous-background-color: var(--bl-secondary-color);
+
+    /* Text styles */
+    --bl-title-color: var(--bl-dark-color);
+    --bl-font-size: 1.2rem;
+    --bl-font-weight: 400;
+    --bl-line-height: 1.5rem;
+}
+
+/* ----- IMPORTED GOOGLE FONTS ----- */
+/*
+font-family: 'Allan', cursive;
+font-family: 'Bebas Neue', cursive;
+font-family: 'Fira Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+
+/* ----- STICKY FOOTER -----  */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+/* ----- END STICKY FOOTER -----  */
+
+
+/* ----- MAIN ----- */
+.checklist {
+    list-style-type: none;
+}
+
+.checklist i {
+    color: var(--bl-secondary-color);
+    padding-right: .5rem;
+}
+
+.techStack img {
+    height: 5em;
+    padding: .5rem;
+}
+
+.appLogo {
+    max-width: 400px;
+}
+/* ----- END MAIN ----- */
