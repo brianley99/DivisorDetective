@@ -44,8 +44,8 @@ font-family: 'Noto Serif JP', serif;
     --bl-line-height: 1.5rem;
 }
 
+/***** STICKY FOOTER *****/
 
-/* ---- STICKY FOOTER ---- */
 html,
 body {
     height: 100%;
@@ -58,27 +58,34 @@ body {
 
 main {
     flex-grow: 1;
-    padding-top: 70px;
+    position: relative;
+    top: 76px;
 }
 
 footer {
     flex-shrink: 0;
+    position: relative;
+    top: 76px;
 }
 
-/* ---- END STICKY FOOTER ---- */
+/***** End STICKY FOOTER *****/
 
 
-/* --- NAVBAR ---- */
+/***** NAVBAR *****/
+
 #mainNav {
     background-color: var(--bl-nav-bg-color) !important;
     font-family: var(--bl-subtitle-font);
-    text-transform: uppercase;
     font-size: 1rem;
 }
 
 #mainNav .active {
     border-bottom: 4px solid var(--bl-primary-color);
 
+}
+
+#mainNav .nav-link {
+    text-transform: uppercase;
 }
 
 .navbar-toggler-bl {
@@ -95,9 +102,25 @@ footer {
     font-family: var(--bl-title-font);
 }
 
-/* --- END NAVBAR  ---- */
+#home,
+#app,
+#code {
+    scroll-margin-top: 86px;
+}
 
-/* ----- MAIN ----- */
+/***** End NAVBAR *****/
+
+
+/***** MAIN *****/
+
+main {
+    max-width: 900px !important;
+}
+
+.appLogo {
+    max-width: 460px;
+}
+
 .checklist {
     list-style-type: none;
 }
@@ -112,13 +135,22 @@ footer {
     padding: .5rem;
 }
 
-.appLogo {
-    max-width: 400px;
+#appForm,
+#resultsTable {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* ----- END MAIN ----- */
+#resultsTable {
+    max-height: 400px;
+    overflow-y: auto;
+}
 
-/* ---- FOOTER ---- */
+/***** End MAIN *****/
+
+
+/***** FOOTER *****/
 
 .social-icon {
     font-size: 2rem;
@@ -162,40 +194,24 @@ footer {
     background-color: var(--bl-dark-color);
 }
 
-/* ---- END FOOTER ---- */
+/***** End FOOTER *****/
 
-/* ---- BOOTSTRAP OVEREIDE ---- */
-.btn-primary {
-    --bs-btn-bg: var(--bl-primary-color);
-    --bs-btn-border-color: var(--bl-primary-color);
-    --bs-btn-hover-bg: var(--bl-highlight-color);
-    --bs-btn-hover-border-color: var(--bl-highlight-color);
-    --bs-btn-active-color: var(--bl-light-color);
-}
 
-.btn-outline-light {
-    --bs-btn-border-color: var(--bl-light-color);
-    --bs-btn-hover-bg: var(--bl-light-color);
-    --bs-btn-hover-border-color: var(--bl-light-color);
-    --bs-btn-active-color: var(--bl-dark-color);
-}
+/***** Media Quieries *****/
 
-/* ---- END BOOTSTRAP OVEREIDE ---- */
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
 
-/* ----- TABLE CSS ----- */
-.binary-bandit {
-    color: blue !important;
-    font-weight: bolder;
-}
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
 
-.binary {
-    color: yellowgreen !important;
-    font-weight: bold;
-}
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
 
-.bandit {
-    color: orange !important;
-    font-weight: bold;
-}
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
 
-/* ----- END TABLE CSS ----- */
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {}
+
+/***** End Media Quieries *****/

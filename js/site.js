@@ -1,70 +1,103 @@
-//get the start and end numbers from the inputs
-//enrty point AKA controller function
+
+//Controller
 function getValues() {
 
-    let firstValue = document.getElementById('firstValue').value;
-    let secondValue = document.getElementById('secondValue').value;
-    let limitValue = document.getElementById('limitValue').value;
+    //Get Inputs from page
+    let firstDivisor = document.getElementById('firstDivisor').value;
+    let seconfDivisor = document.getElementById('seconfDivisor').value;
+    let rangeValue = document.getElementById('rangeValue').value;
 
-    let firstNumber = parseInt(firstValue);
-    let secondNumber = parseInt(secondValue);
-    let limitNumber = parseInt(limitValue);
+    //Conver Inputs to numbers
+    firstDivisor = parseFloat(firstDivisor);
+    seconfDivisor = parseFloat(seconfDivisor);
+    rangeValue = parseFloat(rangeValue);
 
-    if (Number.isInteger(firstNumber) && Number.isInteger(secondNumber) && Number.isInteger(limitNumber)) {
-        // Valid numbers
-        let numberArray = generateFizzBuzz(limitNumber);
-        displayFizzBuzz(numberArray, firstNumber, secondNumber);
-    } else {
-        // Display an error
+    //Validate inputs
+    if (Number.isInteger(firstDivisor) == false) {
+        //First Divisor Error Display
         Swal.fire({
             icon: 'error',
             title: 'Ooops!',
-            text: 'Please enter valid Numbers for the start and and values',
+            text: 'Please enter valid Number for First Divisor',
             backdrop: 'false'
         });
+    } else if (Number.isInteger(seconfDivisor) == false) {
+        //Second Divisor Error Display
+        Swal.fire({
+            icon: 'error',
+            title: 'Ooops!',
+            text: 'Please enter valid Number for Second Divisor',
+            backdrop: 'false'
+        });
+    } else if (Number.isInteger(rangeValue) == false) {
+        //Range Error Display
+        Swal.fire({
+            icon: 'error',
+            title: 'Ooops!',
+            text: 'Please enter valid Number for Range',
+            backdrop: 'false'
+        });
+    } else {
+        //Successfully Validated Inputs
+
+        //Call generateDivisors
+        let divisorNumbers = generateDivisors(firstDivisor, seconfDivisor, rangeValue);
+
+        //Call displayDivisors
+        displayDivisors(divisorNumbers);
     }
-
-
-
 }
 
-//generate the range of numbers to display
-//business logic function
-function generateFizzBuzz(limitNumber) {
+//Logic
+function generateDivisors(firstDivisor, secondDivisor, rangeValue) {
 
-    let numbers = [];
+    //Create empty array for numbers
+    let divisors = [];
 
-    for (let i = 1; i <= limitNumber; i++) {
-        numbers.push(i);
-    }
+    //Add numbers to array using for loop
+    for (let number = 1; number <= rangeValue; number++) {
+        //Go through all numbers from 1 to rangeValue
 
-    return numbers; // => [0, 1, 2, ..., 100]
-
-}
-
-//showing the generated numbers on the page and bolding even numbers
-//view function
-function displayFizzBuzz(numbers, firstNumber, secondNumber) {
-
-    let results = '';
-
-    for (let index = 0; index < numbers.length; index = index + 1) {
-
-        let currentNumber = numbers[index];
-
-        if (currentNumber % firstNumber == 0 && currentNumber % secondNumber == 0) {
-            results = results + '<tr><td class="binary-bandit">The Binary Bandit!</td></tr>';
-        } else if (currentNumber % firstNumber == 0) {
-            results = results + '<tr><td class="binary">Binary</td></tr>';
-        } else if (currentNumber % secondNumber == 0) {
-            results = results + '<tr><td class="bandit">Bandit</td></tr>';
+        //Add 'binary', 'bandit', 'The Binary Bandit!' if disvisble
+        if(number % firstDivisor == 0 && number % secondDivisor == 0){
+            divisors.push('The Binary Bandit!');    
+        } else if (number % firstDivisor == 0){
+            divisors.push('Binary');
+        } else if (number % secondDivisor == 0){
+            divisors.push('Bandit');
         } else {
-            results = results + '<tr><td>' + currentNumber + '</td></tr>';
-        }
+            divisors.push(number);
+        };
+    };
 
+    //Return array
+    return divisors;
+}
+
+//View
+function displayDivisors(divisorNumbers) {
+
+    //Create empty string to store table rows into
+    let tabelRows = '';
+
+    //Format all divisorNumbers to html table rows
+    for (let index = 0; index < divisorNumbers.length; index++) {
+
+        let element = divisorNumbers[index];
+
+        //Highlight divisible values
+        if (element == 'The Binary Bandit!') {
+            tabelRows += `<tr><td class="text-danger fw-bold">${element}</td></tr>`;
+        } else if (element == 'Binary') {
+            tabelRows += `<tr><td class="text-success">${element}</td></tr>`;
+        } else if ( element == 'Bandit') {
+            tabelRows += `<tr><td class="text-warning">${element}</td></tr>`;
+        } else {
+            tabelRows += `<tr><td>${element}</tr></td>`
+        };
     }
 
-    let tableBody = document.getElementById('results');
-    tableBody.innerHTML = results;
-
+    //Display table to page
+    let tableBody = document.getElementById('resultsTableBody');
+    tableBody.innerHTML = tabelRows;
 }
