@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-scale=false">
-    <title>Divisor Detective : A Coding Challange by Brian Ley</title>
+    <title> Divisor Detective : A Coding Challange by Brian Ley</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="/img/Favicon/favicon.ico" type="image/x-icon" />
@@ -53,7 +53,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#hero">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#app">The App</a>
@@ -62,14 +62,13 @@
                             <a class="nav-link" href="#code">The Code</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://github.com/brianley99/DivisorDetective"
-                                target="_blank">Repo</a>
+                            <a class="nav-link" href="https://github.com/brianley99/DivisorDetective" target="_blank">Repo</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="https://bley-portfolio.netlify.app/" target="_blank">About</a>
                         </li>
                         <li class="nav-item">
-                            <!-- ADD LINK TO BLOG-->
+                            <!-- TODO: ADD LINK TO BLOG-->
                             <a class="nav-link" href="#" target="_blank">Blog</a>
                         </li>
                     </ul>
@@ -78,82 +77,99 @@
         </nav>
     </header>
 
-    <main class="container p-3">
-        <section id="home" class="hero">
-            <div class="row row-cols-1 row-cols-lg-2 g-3">
-                <div class="col d-flex justify-content-center mb-3">
-                    <!-- ADD APP LOGO -->
-                    <img src="/img/Divisor Detective.svg" class="appLogo mx-auto w-100" />
+    <main>
+        <div id="hero" class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="/img/Divisor Detective.svg" class="d-block mx-lg-auto img-fluid" alt="Divisor Detective Logo"
+                        width="700" height="500" loading="lazy">
                 </div>
-                <div class="col d-flex justify-content-center align-items-center">
-                    <div>
-                        <h1>Coding Challange</h1>
-                        <!-- ADD APP DESCRIPTION-->
-                        <p class="lead mb-3">Help detective Dan catch the Binary Bandit! Input two numbers and a range,
-                            then click 'Find Divisors'. Divisible
-                            numbers by the first input show 'Binary', by the second input show 'Bandit', and by both
-                            show 'The Binary Bandit!'</p>
-                        <a href="#app" class="btn btn-primary btn-lg">Try it out!</a>
-                        <a href="#code" class="btn btn-outline-dark btn-lg">View Code</a>
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+                        Coding Challange</h1>
+                    <p class="lead">Help detective Dan catch the Binary Bandit! Input two numbers and a range,
+                    then click 'Find Divisors'. Divisible
+                    numbers by the first input show 'Binary', by the second input show 'Bandit', and by both
+                    show 'The Binary Bandit!'</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <a href="#app" class="btn btn-primary btn-lg px-4 me-md-2">Try it out!</a>
+                        <a href="#code" class="btn btn-outline-secondary btn-lg px-4">View Code</a>
                     </div>
-
                 </div>
             </div>
-        </section>
-        <hr>
-        <section id="about" class="mt-5">
-            <h3 class="fw-light">Build Using</h3>
-            <div class="techStack mb-2">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" />
+        </div>
+        <div class="section-divider"></div>
+        <div id="techStack" class="container px-4 py-5">
+            <h2 class="pb-2 border-bottom">Tech Stack</h2>
+            <div class="row g-4 py-5 row-cols-1 row-cols-md-2 row-cols-xl-4">
+                <div class="col d-flex align-items-start">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                        class="mt-2 me-3" />
+                    <div>
+                        <h3 class="fs-2">JavaScript</h3>
+                        <p>I used JavaScript to create interactive elements, validate user input, and enhance user
+                            experience
+                            through dynamic
+                            content, and functionality.</p>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-start">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                        class="mt-2 me-3" />
+                    <div>
+                        <h3 class="fs-2">Bootstrap</h3>
+                        <p>I used Bootstrap to create responsive and mobile-friendly design. Bootstrap provided a
+                            framework
+                            for creating consistent layouts, typography, and UI components.</p>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-start">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                        class="mt-2 me-3" />
+                    <div>
+                        <h3 class="fs-2">HTML</h3>
+                        <p>I used HTML to organize text, images, and other
+                            media into a logical and accessible format for users.</p>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-start">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                        class="mt-2 me-3" />
+                    <div>
+                        <h3 class="fs-2">CSS</h3>
+                        <p>I used CSS to control the color, typography, and other design elements of HTML content to
+                            create
+                            visually
+                            appealing and consistent user interface.</p>
+                    </div>
+                </div>
             </div>
-            <ul class="checklist">
-                <li>
-                    <i class="bi bi-check-square-fill"></i>
-                    <span>CSS & Bootstrap Layout</span>
-                </li>
-                <li>
-                    <i class="bi bi-check-square-fill"></i>
-                    <span>JavaScript Fundamentals</span>
-                </li>
-                <li>
-                    <i class="bi bi-check-square-fill"></i>
-                    <span>JavaScript Loops</span>
-                </li>
-                <li>
-                    <i class="bi bi-check-square-fill"></i>
-                    <span>JavaScript DOM Manipulation</span>
-                </li>
-                <li>
-                    <i class="bi bi-check-square-fill"></i>
-                    <span>Boolean Logic</span>
-                </li>
-            </ul>
-        </section>
-        <hr>
-        <section id="app" class="mt-5">
-            <h3 class="fw-light">The App</h3>
-            <ol>
-                <li>Input two numbers and a range.</li>
-                <li>Click 'Find Divisors'.</li>
-            </ol>
+        </div>
+        <div class="section-divider"></div>
+        <div id="app" class="container px-4 py-5">
+            <h2 class="pb-2 border-bottom">The App</h2>
+
             <form id="appForm" action="#" class="bg-primary-subtle rounded p-3 mt-4 mb-2">
                 <div class="row g-3">
                     <div class="col-6 col-md-4">
-                        <label for="firstDivisor" class="form-label">First Divisor</label>
-                        <input id="firstDivisor" type="number" aria-label="First Divisor" value="3"
-                            class="form-control" />
+                        <div class="form-floating">
+                            <input type="number" class="form-control" id="firstDivisor" value="3"
+                                placeholder="First Divisor">
+                            <label for="firstDivisor">First Divisor</label>
+                        </div>
                     </div>
                     <div class="col-6 col-md-4">
-                        <label for="seconfDivisor" class="form-label">Second Divisor</label>
-                        <input id="seconfDivisor" type="number" aria-label="Second Divisor" value="5"
-                            class="form-control" />
+                        <div class="form-floating">
+                            <input type="number" class="form-control" id="secondDivisor" value="5"
+                                placeholder="Second Divisor">
+                            <label for="secondDivisor">Second Divisor</label>
+                        </div>
                     </div>
-                    <div class="col-12 col-md-4">
-                        <label for="rangeValue" class="form-label">Range</label>
-                        <input id="rangeValue" type="number" aria-label="Range" value="100" class="form-control" />
+                    <div class="col-12">
+                        <div class="form-floating">
+                            <input type="number" class="form-control" id="rangeValue" value="100" placeholder="Range">
+                            <label for="rangeValue">Range</label>
+                        </div>
                     </div>
                     <div class="col text-start">
                         <button onclick="getValues()" type="button" class="btn btn-primary">
@@ -162,32 +178,36 @@
                     </div>
                 </div>
             </form>
-            <div id="resultsTable" class="table-responsive">
-                <table class="table table-striped table-primary table-bordered text-end">
-                    <tbody id="resultsTableBody">
-                        <!-- JavaScript results go here-->
-                    </tbody>
-                </table>
+            <div id="results" class="d-none bg-success-subtle text-center rounded shadow p-4">
+                <div id="resultsTable" class="table-responsive">
+                    <table class="table table-striped table-hover text-end">
+                        <tbody id="resultsTableBody">
+                            <!-- JavaScript results go here-->
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </section>
-        <hr>
-        <section id="code" class="mt-5">
-            <h3 class="fw-light">The Code</h3>
-            <!-- Overview -->
-            <h4 class="mt-3">Seperation of concerns</h4>
+        </div>
+        <div class="section-divider"></div>
+        <div id="code" class="container px-4 py-5">
+
+            <h2 class="pb-2 border-bottom">The Code</h2>
+            <h4 class="pt-2 mt-4">Seperation of concerns</h4>
             <p>The solution to this coding challange is split into three sections, each of which will addreress a
                 seperate
                 concern.</p>
             <dl class="row mb-0">
                 <dt class="col-md-3">Controller, Logic, View</dt>
                 <dd class="col-md-9">
-                    <p>The <em>Controller</em> function is the entry point for the page, it's responsible for getting
-                        and validating the inputs as well as calling any other functions.</p>
-                    <p>The <em>Logic</em> function takes 2 divisor numbers with a range and returns an array with numbers and strings.</p>
-                    <p>The <em>View</em> function will take an array and display it on the page as an html table.</p>
+                    <p>The <em>Controller</em> function is the entry point for the page, it's responsible for
+                        getting
+                        and validating the inputs as well as handling the logic and view functions.</p>
+                    <p>The <em>Logic</em> function is in charge of all the calculations.</p>
+                    <p>The <em>View</em> function formats and displays data to the page.</p>
                 </dd>
             </dl>
-            <pre class="line-numbers">
+            <div class="mx-md-3">
+                <pre class="line-numbers mt-0">
                     <code class="language-js">
                         //Controller
 function getValues()
@@ -198,24 +218,28 @@ function generateDivisors(firstDivisor, secondDivisor, rangeValue)
 //View
 function displayDivisors(divisorNumbers)
                     </code>
-            </pre>
-            <!-- Detail on functions -->
-            <h4 class="mt-4">Functions</h4>
-            <div id="getValues" class="mt-4">
+                </pre>
+            </div>
+
+            <h4 class="mt-5">Functions</h4>
+            <div id="getValues" class="pt-3 mt-3">
                 <dl class="row mb-0">
-                    <dt class="col-sm-3">getValues()</dt>
-                    <dd class="col-sm-9">
-                        <!-- ADD DETAILS ON FUNCTION-->
-                        <p></p>
+                    <dt class="col-md-3">getValues</dt>
+                    <dd class="col-md-9">
+                        <p>Is called when the user clicks <span class="text-primary">Find Divisors</span>.</p>
+                        <p>Gets and validates inputs from the page.</p>
+                        <p>Calls it's borther functions to generate numbers and display them on the page.</p>
                     </dd>
                 </dl>
-                <pre class="line-numbers mt-0"><code class="language-js">
-                    //Controller
+                <div class="mx-md-3">
+                    <pre class="line-numbers mt-0">
+                        <code class="language-js">
+                            //Controller
 function getValues() {
 
     //Get Inputs from page
     let firstDivisor = document.getElementById('firstDivisor').value;
-    let seconfDivisor = document.getElementById('seconfDivisor').value;
+    let seconfDivisor = document.getElementById('secondDivisor').value;
     let rangeValue = document.getElementById('rangeValue').value;
 
     //Conver Inputs to numbers
@@ -258,19 +282,23 @@ function getValues() {
         displayDivisors(divisorNumbers);
     }
 }
-                </code></pre>
+                        </code>
+                    </pre>
+                </div>
             </div>
-            <div id="generateDivisors" class="mt-5">
+            <div id="generateDivisors" class="pt-3 mt-5">
                 <dl class="row mb-0">
-                    <dt class="col-sm-3">generateDivisors()</dt>
-                    <dd class="col-sm-9">
-                        <!-- ADD DETAILS ON FUNCTION-->
-                        <p></p>
+                    <dt class="col-md-3">generateDivisors</dt>
+                    <dd class="col-md-9">
+                        <p>Takes <span class="text-primary">firstDivisor</span>, <span class="text-primary">secondDivisor</span>, and <span class="text-primary">rangeValue</span>.</p>
+                        <p>Generates an array of numbers based on the <span class="text-primary">rangeValue</span>, changes numbers if divisible by ether the <span class="text-primary">firstDivisor</span> and/or <span class="text-primary">secondDivisor</span> to the coresponding phrase.</p>
+                        <p>Returns array <span class="text-primary">divisors</span>.</p>
                     </dd>
                 </dl>
-                <pre class="line-numbers mt-0"><code class="language-js">
-                    //Logic
-function generateDivisors(firstDivisor, secondDivisor, rangeValue) {
+                <div class="mx-md-3">
+                    <pre class="line-numbers mt-0">
+                        <code class="language-js">
+                            function generateDivisors(firstDivisor, secondDivisor, rangeValue) {
 
     //Create empty array for numbers
     let divisors = [];
@@ -294,18 +322,22 @@ function generateDivisors(firstDivisor, secondDivisor, rangeValue) {
     //Return array
     return divisors;
 }
-                </code></pre>
+                        </code>
+                    </pre>
+                </div>
             </div>
-            <div id="displayDivisors" class="mt-4">
+            <div id="displayDivisors" class="pt-3 mt-5">
                 <dl class="row mb-0">
-                    <dt class="col-sm-3">displayDivisors()</dt>
-                    <dd class="col-sm-9">
-                        <!-- ADD DETAILS ON FUNCTION-->
-                        <p></p>
+                    <dt class="col-md-3">displayDivisors</dt>
+                    <dd class="col-md-9">
+                        <p>Takes <span class="text-primary">divisorNumbers</span>.</p>
+                        <p>Formats and displays <span class="text-primary">divisorNumbers</span> as an html table to the page.</p>
                     </dd>
                 </dl>
-                <pre class="line-numbers mt-0"><code class="language-js">
-                    //View
+                <div class="mx-md-3">
+                    <pre class="line-numbers mt-0">
+                        <code class="language-js">
+                            //View
 function displayDivisors(divisorNumbers) {
 
     //Create empty string to store table rows into
@@ -320,9 +352,9 @@ function displayDivisors(divisorNumbers) {
         if (element == 'The Binary Bandit!') {
             tabelRows += `&lt;tr>&lt;td class="text-danger fw-bold">${element}&lt;/td>&lt;/tr>`;
         } else if (element == 'Binary') {
-            tabelRows += `&lt;tr>&lt;td class="text-success">${element}&lt;/td>&lt;/tr>`;
+            tabelRows += `&lt;tr>&lt;td class="fw-bold">${element}&lt;/td>&lt;/tr>`;
         } else if ( element == 'Bandit') {
-            tabelRows += `&lt;tr>&lt;td class="text-warning">${element}&lt;/td>&lt;/tr>`;
+            tabelRows += `&lt;tr>&lt;td class="fw-bold">${element}&lt;/td>&lt;/tr>`;
         } else {
             tabelRows += `&lt;tr>&lt;td>${element}&lt;/tr>&lt;/td>`
         };
@@ -331,13 +363,23 @@ function displayDivisors(divisorNumbers) {
     //Display table to page
     let tableBody = document.getElementById('resultsTableBody');
     tableBody.innerHTML = tabelRows;
+    document.getElementById('results').classList.remove('d-none');
 }
-                </code></pre>
+                        </code>
+                    </pre>
+                </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer class="container-fluid mt-3 footer-main">
+        <div class="row footer-bg-cta">
+            <div class="col">
+                <div class="container py-3 footer-cta text-center">
+                    <a href="https://github.com/brianley99/DivisorDetective" class="footer-message">Check out the full code on Github</a>
+                </div>
+            </div>
+        </div>
         <div class="container-xxl">
             <div class="row row-cols-1 row-cols-md-3 gy-3 align-items-center text-center text-light py-3">
                 <div class="col text-md-center">

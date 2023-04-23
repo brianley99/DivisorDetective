@@ -4,7 +4,7 @@ function getValues() {
 
     //Get Inputs from page
     let firstDivisor = document.getElementById('firstDivisor').value;
-    let seconfDivisor = document.getElementById('seconfDivisor').value;
+    let seconfDivisor = document.getElementById('secondDivisor').value;
     let rangeValue = document.getElementById('rangeValue').value;
 
     //Conver Inputs to numbers
@@ -89,9 +89,9 @@ function displayDivisors(divisorNumbers) {
         if (element == 'The Binary Bandit!') {
             tabelRows += `<tr><td class="text-danger fw-bold">${element}</td></tr>`;
         } else if (element == 'Binary') {
-            tabelRows += `<tr><td class="text-success">${element}</td></tr>`;
+            tabelRows += `<tr><td class="fw-bold">${element}</td></tr>`;
         } else if ( element == 'Bandit') {
-            tabelRows += `<tr><td class="text-warning">${element}</td></tr>`;
+            tabelRows += `<tr><td class="fw-bold">${element}</td></tr>`;
         } else {
             tabelRows += `<tr><td>${element}</tr></td>`
         };
@@ -100,4 +100,5 @@ function displayDivisors(divisorNumbers) {
     //Display table to page
     let tableBody = document.getElementById('resultsTableBody');
     tableBody.innerHTML = tabelRows;
+    document.getElementById('results').classList.remove('d-none');
 }
